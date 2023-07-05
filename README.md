@@ -1,4 +1,4 @@
-[Calculate Poll Results](https://michaelf314.github.io/calculate-poll-results/)
+# [Calculate Poll Results](https://michaelf314.github.io/calculate-poll-results/)
 
 Calculate poll results from a collection of IMDb or iCheckMovies lists. Choose the files, and then click "Calculate results".
 
