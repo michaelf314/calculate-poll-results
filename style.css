@@ -1,0 +1,19 @@
+body {
+  background-color: #ccc;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+button, input {
+  margin: 10px 0;
+}

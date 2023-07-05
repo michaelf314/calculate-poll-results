@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculate poll results</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Calculate poll results</h1>
+      The filenames should be in 1 of 3 formats:
+      <br>
+      username.csv, username (unranked).csv, or username (unrankedX).csv, where X is the number of ranked films.
+      <br>
+      <input type="file" id="fileInput" accept=".csv" multiple>
+      <br>
+      <input type="radio" id="titles" name="option" checked>
+      <label for="titles">Titles</label>
+      <input type="radio" id="people" name="option">
+      <label for="people">People</label><br>
+      <b>Half-life</b>
+      <input type="number" id="halfLife" min="1" max="5000" value="50" onfocus="this.select()">
+      <br>
+      <textarea id="ineligible" rows="5" cols="50" onfocus="this.select();" placeholder="Enter a list of ineligible IMDb URLs."></textarea>
+      <br>
+      <button onclick="calculateResults()">Calculate results</button>
+      <br>
+      <b>Duplicates</b>
+      <br>
+      <textarea id="duplicates" rows="10" cols="100" onfocus="this.select();" placeholder="Duplicates will be shown after calculating the results, if there are any."></textarea>
+      <br>
+      <b>List sizes</b>
+      <br>
+      <textarea id="listSizes" rows="10" cols="50" onfocus="this.select();" placeholder="List sizes will be shown after calculating the results (not counting duplicates and ineligible films)."></textarea>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
